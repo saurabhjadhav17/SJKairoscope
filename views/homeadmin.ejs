@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Kairoscope...</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/style.css" type="text/css">
+
+  </head>
+  <body style="background: #FCF3CF; ">
+    <div id="pagewrap">
+    <%- include('includes/header-admin.ejs'); -%>
+
+    <!--Pending Orders end-->
+    <div class="container-fluid" style="margin-top: 78px; ">
+      <h3>PENDING ORDERS</h3>
+      <% if (pendingOrders.length > 0) { %>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ORDER ID</th>
+            <th scope="col">CLIENT NAME</th>
+            <th scope="col">CONTACT</th>
+            <th scope="col">EMAIL ID</th>
+            <th scope="col">CLIENT ADDRESS</th>
+            <th scope="col">EVENT TYPE</th>
+            <th scope="col">ORDER PLACED DATE</th>
+            <th scope="col">EVENT DATE</th>
+            <th scope="col">TIME FROM</th>
+            <th scope="col">TIME TO</th>
+            <th scope="col">EVENT ADDRESS</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<pendingOrders.length ; i++) { %>
+          <tr>
+            <td scope="row"><%= i+1 %></td>
+            <td><%= pendingOrders[i].client_name %></td>
+            <td><%= pendingOrders[i].client_contact %></td>
+            <td><%= pendingOrders[i].client_email_id %></td>
+            <td><%= pendingOrders[i].client_address %></td>
+            <td><%= pendingOrders[i].event_type %></td>
+            <td><%= pendingOrders[i].order_date %></td>
+            <td><%= pendingOrders[i].event_date %></td>
+            <td><%= pendingOrders[i].time_FROM %></td>
+            <td><%= pendingOrders[i].time_TO %></td>
+            <td><%= pendingOrders[i].event_address %></td>
+            <td>
+              <div class="btn-group" role="group" >
+                <a href="homeadmin/confirm-order/<%= pendingOrders[i].order_id %>"><button type="button" class="btn btn-outline-success">Confirm</button></a>
+              </div>
+              <div class="btn-group" role="group" >
+                <a href="homeadmin/decline-order/<%= pendingOrders[i].order_id %>"><button type="button" class="btn btn-outline-danger" style="margin-top: 10px; ">Decline</button></a>
+              </div>
+            </td>
+          </tr>
+          <% }; %>
+        </tbody>
+      </table>
+      <% }else { %>
+        <p><strong> There are no records available...</strong></p>
+
+      <%  } %>
+    </div>
+    <!--Pending Orders end-->
+
+    <!--Confirm Orders-->
+    <div class="container-fluid" style="margin-top: 78px; ">
+      <h3>CONFIRM ORDERS</h3>
+      <% if (confirmOrders.length > 0) { %>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ORDER ID</th>
+            <th scope="col">CLIENT NAME</th>
+            <th scope="col">CONTACT</th>
+            <th scope="col">EMAIL ID</th>
+            <th scope="col">CLIENT ADDRESS</th>
+            <th scope="col">EVENT TYPE</th>
+            <th scope="col">ORDER PLACED DATE</th>
+            <th scope="col">EVENT DATE</th>
+            <th scope="col">TIME FROM</th>
+            <th scope="col">TIME TO</th>
+            <th scope="col">EVENT ADDRESS</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<confirmOrders.length ; i++) { %>
+          <tr>
+            <td scope="row"><%= i+1 %></td>
+            <td><%= confirmOrders[i].client_name %></td>
+            <td><%= confirmOrders[i].client_contact %></td>
+            <td><%= confirmOrders[i].client_email_id %></td>
+            <td><%= confirmOrders[i].client_address %></td>
+            <td><%= confirmOrders[i].event_type %></td>
+            <td><%= confirmOrders[i].order_date %></td>
+            <td><%= confirmOrders[i].event_date %></td>
+            <td><%= confirmOrders[i].time_FROM %></td>
+            <td><%= confirmOrders[i].time_TO %></td>
+            <td><%= confirmOrders[i].event_address %></td>
+            <td>
+              <div class="btn-group" role="group" >
+                <a href="homeadmin/complete-order/<%= confirmOrders[i].order_id %>"><button type="button" class="btn btn-outline-success">Completed</button></a>
+              </div>
+            </td>
+          </tr>
+          <% }; %>
+        </tbody>
+      </table>
+      <% }else { %>
+        <p><strong> There are no records available...</strong></p>
+
+      <%  } %>
+    </div>
+    <!--Confirm Orders end-->
+
+    <!--Completed Orders-->
+    <div class="container-fluid" style="margin-top: 78px; ">
+      <h3>COMPLETED ORDERS</h3>
+      <% if (completeOrders.length > 0) { %>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ORDER ID</th>
+            <th scope="col">CLIENT NAME</th>
+            <th scope="col">CONTACT</th>
+            <th scope="col">EMAIL ID</th>
+            <th scope="col">CLIENT ADDRESS</th>
+            <th scope="col">EVENT TYPE</th>
+            <th scope="col">ORDER PLACED DATE</th>
+            <th scope="col">EVENT DATE</th>
+            <th scope="col">TIME FROM</th>
+            <th scope="col">TIME TO</th>
+            <th scope="col">EVENT ADDRESS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<completeOrders.length ; i++) { %>
+          <tr>
+            <td scope="row"><%= i+1 %></td>
+            <td><%= completeOrders[i].client_name %></td>
+            <td><%= completeOrders[i].client_contact %></td>
+            <td><%= completeOrders[i].client_email_id %></td>
+            <td><%= completeOrders[i].client_address %></td>
+            <td><%= completeOrders[i].event_type %></td>
+            <td><%= completeOrders[i].order_date %></td>
+            <td><%= completeOrders[i].event_date %></td>
+            <td><%= completeOrders[i].time_FROM %></td>
+            <td><%= completeOrders[i].time_TO %></td>
+            <td><%= completeOrders[i].event_address %></td>
+          </tr>
+          <% }; %>
+        </tbody>
+      </table>
+      <% }else { %>
+        <p><strong> There are no records available...</strong></p>
+      <%  } %>
+    </div>
+    <!--Completed Orders end-->
+  </div>
+</div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>

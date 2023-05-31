@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Kairoscope...</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#newCostModal").modal('show');
+      });
+
+    </script>
+  </head>
+  <body>
+
+    <!--Modal-->
+    <div class="modal fade " id="newCostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="text-center text-info">Edit Event Cost</h3>
+            <a href="/admin-panel/editcost"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
+          </div>
+          <div id="login">
+            <div class="container">
+                <div id="login-row" class="row justify-content-center align-items-center">
+                    <div id="login-column" class="col-md-8">
+                      <h3 class="text-center text-white pt-2"></h3>
+                      <form id="login-form" class="form" action="/admin-panel/editcost/newcost/<%= items[0].event_id %>" method="POST">
+                        <input type="hidden" name="e_id" value="<%= items[0].event_id %>">
+                        <div class="form-group">
+                          <label for="e_type" class="text-info">Event Type :</label><br>
+                          <input type="text" name="e_type" class="form-control" value="<%= items[0].event_type %>" readonly>
+                        </div>
+                        <div class="form-group">
+                          <label for="e_oldcost" class="text-info">Event Old Cost :</label><br>
+                          <input type="text" name="e_oldcost" class="form-control" value="<%= items[0].event_cost %>" readonly >
+                        </div>
+                        <div class="form-group">
+                          <label for="e_newcost" class="text-info">Enter New Cost :</label><br>
+                          <input type="number" name="e_newcost" class="form-control" required >
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" style="margin-bottom: 20px; " name="submit" class="btn btn-info btn-md" value="Save Changes">
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </div>
+  </div>
+  <!--Modal end-->
+  </body>
+</html>

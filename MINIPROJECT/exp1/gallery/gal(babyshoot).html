@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Tutorial Sample Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <style>
+  	body {
+  padding: 0;
+  margin: 0;
+  background: #f2f6e9;
+}
+
+
+/* header*/
+
+.header {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* header*/
+
+
+
+/*gallery */
+h2{
+     text-align: left;
+     color: white;
+     margin: 30px 0 50px;
+}
+.gallery{
+  margin: 10px 50px; 
+}
+.gallery img{
+  width: 200px;
+  padding: 5px;
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.gallery img:hover{
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+/*gallery*/
+
+.features .form-control,
+.features input {
+    border-radius: 0;
+}
+.features .btn {
+  background-color: #589b37;
+  border: 1px solid #589b37;
+  color: #fff;
+  margin-top: 10px;
+}
+.features .btn:hover {
+  background-color: #333;
+  border: 1px solid #333;
+}
+
+</style>
+</head>
+<body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+ <!-- navigation -->
+
+  <nav class="navbar navbar-expand-md">
+  <a class="navbar-brand" href="#"><img src="C:\Users\Saurabh\Desktop\MINIPROJECT\exp1\image/exlogo1.png"></a>
+  
+  <div class="collapse navbar-collapse" id="main-navigation">
+    <ul class="navbar-nav">
+      <mark><h3>Babyshoot</h3></mark>
+    </ul>
+  </div>
+  </nav>
+   <!-- navigation  end-->
+
+    <!--page middle portion-->
+   <header class="page-header header container-fluid">
+
+    <!-- overlay-->
+    <div class="overlay"></div>
+    <!-- overlay-->
+
+        <!--info form--
+    <div class="float-right"><mark><h1>Customer Profile</h1></mark>
+      <div class="form-group">
+  ID: <input type="text" >
+</div>
+<div class="form-group">
+  Name: <input type="text"  >
+</div>
+<div class="form-group">
+ Email: <input type="email"  name="email">
+</div>
+<div class="form-group">
+  Qualification: <input type="text"  >
+</div>
+<div class="form-group">
+  Experience: <input type="text"  >
+</div>
+<div class="form-group">
+  Address: <textarea  rows="4"></textarea>
+</div>
+<div class="form-group">
+  Contact No.: <input type="text"  >
+</div>
+<div class="form-group">
+  Wedding: <input type="text"  >
+</div>
+<div class="form-group">
+  Babyshoot: <input type="text"  >
+</div>
+<div class="form-group">
+  Pre-wedding: <input type="text"  >
+</div>
+<div class="form-group">
+  Maternity: <input type="text"  >
+</div>
+<div class="form-group">
+  Engagement: <input type="text"  >
+</div>
+<input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
+</div>
+ <!--info form-->
+
+ <!--trail form-->
+ <div class="float-right"><mark><h5>Customer Profile</h5></mark>
+<form style="background-color: ">
+    <div class="form-group row">
+        <label for="inputid" class="col-sm-2 col-form-label">ID </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputid">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputname" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputname">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail" >
+        </div>
+    </div>
+   
+    <div class="form-group row">
+        <label for="inputqualification" class="col-sm-2 col-form-label">Qual.</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputqual">
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="inputexp" class="col-sm-2 col-form-label">Exp.</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputexp">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputadd" class="col-sm-2 col-form-label">Address</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputadd">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputphone" class="col-sm-2 col-form-label">Contact No</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputphone">
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputwedd" class="col-sm-2 col-form-label">Baby
+        </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputwedd">
+        </div>
+    </div>
+
+</form>
+</div>
+<!--trail form-->
+     <!--gallery-->
+    <div class="gallery">
+            <img src="image/baby1.jfif">
+            <img src="image/baby2.jfif">
+            <img src="image/baby3.jfif">
+            <img src="image/baby4.jfif">
+    </div>
+    <div class="gallery">
+             <img src="image/baby5.jfif">
+            <img src="image/baby6.jfif">
+            
+    </div>
+
+      <div class="col-xs-2 col-sm-5">
+        <div class="col-xs-3">
+        <input type="submit" class="btn btn-secondary btn-block" value="BACK TO PHOTOGRAPHER LIST" name=""> 
+        <input type="submit" class="btn btn-secondary btn-block" value="BOOK PHOTOGRAPHER" name="">  
+        </div>  
+      </div>
+      <!--btn btn-secondary btn-block-->
+
+ <!--gallery-->
+  </header>
+    
+
+      <script src="index.js"></script>
+  </body>
+</html>

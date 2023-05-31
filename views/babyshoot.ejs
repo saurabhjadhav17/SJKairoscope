@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Kairoscope...</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+    /*gallery */
+
+    .gallery{
+    margin: 10px 50px;
+    }
+    .gallery img{
+    width: 200px;
+    padding: 0px;
+    filter: grayscale(100%);
+    transition: 1s;
+    }
+    .gallery img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    }
+    /*gallery*/
+    </style>
+  </head>
+  <body>
+
+    <div id="pagewrap">
+
+    <%- include('includes/header-client.ejs'); -%>
+
+    <div class="container-fluid" style="margin-top : 100px">
+        <div class="row">
+          <div class="col-sm-8">
+            <!--gallery-->
+            <div class="gallery">
+                    <img src="images/baby1.jfif">
+                    <img src="images/baby2.jfif">
+                    <img src="images/baby3.jfif">
+            </div>
+            <div class="gallery">
+                    <img src="images/baby4.jfif">
+                    <img src="images/baby5.jfif">
+                    <img src="images/baby6.jfif">
+            </div>
+            <div class="row">
+                <div class="col-sm-4" style="margin-left: 50px;">
+                    <a href="/"><button type="button" class="btn btn-outline-danger" >BACK TO HOME</button></a>
+                </div>
+                <div class="col-sm-4" style="margin-left: 50px;">
+                    <a href="/enterdetails"><button type="button" class="btn btn-outline-info">BOOK PHOTOGRAPHER</button></a>
+                </div>
+            </div>
+            <!--btn btn-secondary btn-block-->
+            <!--gallery-->
+          </div>
+
+          <div class="col-sm-4" style="background-color: rgb(197, 237, 238); padding-top: 20px; " >
+            <!--trail form-->
+            <div><h3>Photograher's Details</h3>
+                <form>
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Name :</label>
+                        <label for="inputname" class="col-sm-8">Lakshu Pawar</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Email Id :</label>
+                        <label for="inputname" class="col-sm-8">thekairoscope@gmail.com</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">ContactNo:</label>
+                        <label for="inputname" class="col-sm-8">+91 84548 03026</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Experience:</label>
+                        <label for="inputname" class="col-sm-8">3-4 years</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Babyshoot Cost :</label>
+                        <label for="inputname" class="col-sm-8">Rs. 9,000 per 3hours</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Maternity Cost :</label>
+                        <label for="inputname" class="col-sm-8">Rs. 7,000 per 3hours</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Engagement Cost :</label>
+                        <label for="inputname" class="col-sm-8">Rs. 8,000 per 3hours</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Pre-Wedding Cost :</label>
+                        <label for="inputname" class="col-sm-8">Rs. 6,000 per 3hours</label>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputname" class="col-sm-4">Wedding Cost :</label>
+                        <label for="inputname" class="col-sm-8">Rs. 15,000 per 3hours</label>
+                    </div>
+
+                </form>
+            </div>
+            <!--trail form-->
+          </div>
+        </div>
+    </div>
+
+    <%- include('includes/footer.ejs'); -%>
+
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  </body>
+</html>

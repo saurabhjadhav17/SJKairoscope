@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <title>Kairoscope...</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+  </head>
+  <body style="background: #FCF3CF; ">
+
+    <div class="container-fluid">
+        <h3>Fill The following details to place the order!</h3>
+        <form style="margin-top: 25px; " action="/enterdetails/placedordermsg" method="POST">
+          <div class="form-group row">
+            <label for="fullname" class="col-sm-2 col-form-label text-primary">Name :</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="fullname" placeholder="Enter fullname" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="contact" class="col-sm-2 col-form-label text-primary">Contact No. :</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" name="contact" placeholder="Enter Contact Number" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="emailid" class="col-sm-2 col-form-label text-primary">Email Id :</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="emailid" placeholder="Enter Email Id" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="clientAddress" class="col-sm-2 col-form-label text-primary">Residential Address :</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="clientAddress" placeholder="Enter address" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="eventType" class="col-sm-2 col-form-label text-primary">Select Event Type :</label>
+            <div class="col-sm-10">
+              <div class="input-group">
+                  <select class="custom-select" name="eventType" style="width: 100%; ">
+                    <% if(items.length > 0) { %>
+                      <option >--Select Event--</option>
+                      <% items.forEach(function(item, index) { %>
+                        <option value="<%= item.event_id %>"><%= item.event_type %></option>
+                      <% });%>
+                    <% } %>
+                  </select>
+                </div>
+            </div>
+
+          </div>
+          <div class="form-group row">
+            <label for="orderDate" class="col-sm-2 col-form-label text-primary">Order Date :</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" name="orderDate" required >
+              <span><em style="font-size: 12px; ">Select today's date in this feild !</em></span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="eventDate" class="col-sm-2 col-form-label text-primary">Event Date :</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" name="eventDate" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="timeFrom" class="col-sm-2 col-form-label text-primary">Event Time FROM :</label>
+            <div class="col-sm-10">
+              <input type="time" class="form-control" name="timeFrom" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="timeTo" class="col-sm-2 col-form-label text-primary">Event Time TO :</label>
+            <div class="col-sm-10">
+              <input type="time" class="form-control" name="timeTo" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="eventAddress" class="col-sm-2 col-form-label text-primary">Event Address :</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="eventAddress" placeholder="Enter address" required >
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <input type="submit" id="submit" class="btn btn-success btn-md" value="BOOK">
+            </div>
+          </div>
+        </form>
+    </div>
+  </body>
+</html>

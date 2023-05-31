@@ -1,0 +1,20 @@
+{
+  "name": "kairoscope",
+  "version": "1.0.0",
+  "description": "A website of a photographer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "date-and-time": "^0.13.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.6"
+  }
+}
